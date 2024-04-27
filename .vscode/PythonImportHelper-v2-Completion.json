@@ -1,0 +1,119 @@
+[
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "string",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "string",
+        "description": "string",
+        "detail": "string",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "rand_pass",
+        "kind": 2,
+        "importPath": "task1",
+        "description": "task1",
+        "peekOfCode": "def rand_pass(size):\n    generate_pass=''.join([random.choice(string.ascii_uppercase+string.ascii_lowercase+string.digits)for n in range(size)])    \n    return generate_pass \ngenerated_otp = rand_pass(6)\nprint('new OTP :'+generated_otp)\nwhile True:\n    OTP = input('enter your OTP here:')\n    if OTP == generated_otp:\n        print('Correct OTP')\n        break",
+        "detail": "task1",
+        "documentation": {}
+    },
+    {
+        "label": "generated_otp",
+        "kind": 5,
+        "importPath": "task1",
+        "description": "task1",
+        "peekOfCode": "generated_otp = rand_pass(6)\nprint('new OTP :'+generated_otp)\nwhile True:\n    OTP = input('enter your OTP here:')\n    if OTP == generated_otp:\n        print('Correct OTP')\n        break\n    else:\n        print('ACCESS DENIED.')\n        continue",
+        "detail": "task1",
+        "documentation": {}
+    },
+    {
+        "label": "new_word",
+        "kind": 2,
+        "importPath": "task2",
+        "description": "task2",
+        "peekOfCode": "def new_word():\n    add = input(\"yeni ad elave edin: \")\n    with open(\"file.txt\", \"a\") as file:\n        file.write(add + \"\\n\")\ndef delete_word():\n    word_to_delete = input(\"silmek isdediyniz soz: \")\n    lines = []\n    with open(\"file.txt\", \"r\") as file:\n        lines = file.readlines()\n    with open(\"file.txt\", \"w\") as file:",
+        "detail": "task2",
+        "documentation": {}
+    },
+    {
+        "label": "delete_word",
+        "kind": 2,
+        "importPath": "task2",
+        "description": "task2",
+        "peekOfCode": "def delete_word():\n    word_to_delete = input(\"silmek isdediyniz soz: \")\n    lines = []\n    with open(\"file.txt\", \"r\") as file:\n        lines = file.readlines()\n    with open(\"file.txt\", \"w\") as file:\n        for line in lines:\n            if line.strip() != word_to_delete:\n                file.write(line)\n    print(\"ugurla silindi.\")",
+        "detail": "task2",
+        "documentation": {}
+    },
+    {
+        "label": "edit_word",
+        "kind": 2,
+        "importPath": "task2",
+        "description": "task2",
+        "peekOfCode": "def edit_word():\n    old_word = input(\"hazirki soz: \")\n    new_word = input(\"deyismek isdediyniz yeni soz: \")\n    with open(\"file.txt\", \"r\") as file:\n        lines = file.readlines()\n    with open(\"file.txt\", \"w\") as file:\n        for line in lines:\n            if line.strip() == old_word:\n                file.write(new_word + \"\\n\")\n            else:",
+        "detail": "task2",
+        "documentation": {}
+    },
+    {
+        "label": "delete_file",
+        "kind": 2,
+        "importPath": "task2",
+        "description": "task2",
+        "peekOfCode": "def delete_file():\n    if os.path.exists(\"file.txt\"):\n        os.remove(\"file.txt\")\n        print(\"File ugurla silindi.\")\n    else:\n        print(\"File silinmedi_xetani tap!!!.\")\ndef cread():\n    while True:\n        choice = input(\"Yeni ad (1) Adi sil (2) Adi redakte et(3) Fayli silin (4)  cixis (5):  \")\n        if choice == \"1\":",
+        "detail": "task2",
+        "documentation": {}
+    },
+    {
+        "label": "cread",
+        "kind": 2,
+        "importPath": "task2",
+        "description": "task2",
+        "peekOfCode": "def cread():\n    while True:\n        choice = input(\"Yeni ad (1) Adi sil (2) Adi redakte et(3) Fayli silin (4)  cixis (5):  \")\n        if choice == \"1\":\n            new_word()\n        elif choice == \"2\":\n            delete_word()\n        elif choice == \"3\":\n            edit_word()\n        elif choice == \"4\":",
+        "detail": "task2",
+        "documentation": {}
+    },
+    {
+        "label": "random_line",
+        "kind": 5,
+        "importPath": "task4",
+        "description": "task4",
+        "peekOfCode": "random_line = random.choice(lines)\nwords = random_line.split()\nrandom_word = random.choice(words)\nprint(random_word)",
+        "detail": "task4",
+        "documentation": {}
+    },
+    {
+        "label": "words",
+        "kind": 5,
+        "importPath": "task4",
+        "description": "task4",
+        "peekOfCode": "words = random_line.split()\nrandom_word = random.choice(words)\nprint(random_word)",
+        "detail": "task4",
+        "documentation": {}
+    },
+    {
+        "label": "random_word",
+        "kind": 5,
+        "importPath": "task4",
+        "description": "task4",
+        "peekOfCode": "random_word = random.choice(words)\nprint(random_word)",
+        "detail": "task4",
+        "documentation": {}
+    }
+]
